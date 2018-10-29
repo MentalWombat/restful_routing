@@ -1,0 +1,9 @@
+body {
+	background-color: #212529;
+	height: 1vh;
+}
+
+.table td,
+.table th {
+  border-top: 1px solid #212529;
+}
