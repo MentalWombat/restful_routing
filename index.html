@@ -3,63 +3,71 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/table.min.css">
   <link rel="stylesheet" type="text/css" href="styles.css">
-	<title>7 RESTful Routing</title>
+	<title>7 RESTful Routing and Mongoose Methods</title>
 </head>
 <body>
-	<div class="col-lg-7 col-md-12 mx-auto">
-		<table class="table table-hover align-middle">
-		  <thead class="thead-dark">
-		    <tr>
-		      <th scope="col">Action</th>
-		      <th scope="col">Path</th>
-		      <th scope="col">Method</th>
-		      <th scope="col">Purpose</th>
+	<div class="ui raised very padded text container segment">
+		<table class="ui single line definition collapsing table">
+		  <thead>
+		    <tr class="ui inverted table">
+		      <th></th>
+		      <th>Path</th>
+		      <th>Method</th>
+		      <th>Purpose</th>
+		      <th>Mongoose Method</th>
 		    </tr>
 		  </thead>
 		  <tbody>
-		    <tr class="table-primary">
-		      <th scope="row">Index</th>
+		    <tr class="ui inverted purple table">
+		      <th>Index</th>
 		      <td>/items</td>
 		      <td>GET</td>
 		      <td>List all items</td>
+		      <td>Item.find()</td>
 		    </tr>
-		    <tr class="table-success">
-		      <th scope="row">New</th>
+		    <tr class="ui inverted teal table">
+		      <th>New</th>
 		      <td>/items/new</td>
 		      <td>GET</td>
 		      <td>Show new item form</td>
+		      <td></td>
 		    </tr>
-		    <tr class="table-success">
-		      <th scope="row">Create</th>
+		    <tr class="ui inverted blue table">
+		      <th>Create</th>
 		      <td>/items</td>
 		      <td>POST</td>
 		      <td>Create a new item, then redirect</td>
+		      <td>Item.create()</td>
 		    </tr>
-        <tr class="table-info">
-          <th scope="row">Show</th>
+        <tr class="ui inverted pink table">
+          <th>Show</th>
           <td>/items/:id</td>
           <td>GET</td>
           <td>Show info about one item</td>
+          <td>Item.findById()</td>
         </tr>
-        <tr class="table-warning">
-          <th scope="row">Edit</th>
+        <tr class="ui inverted yellow table">
+          <th>Edit</th>
           <td>/items/:id/edit</td>
           <td>GET</td>
           <td>Show edit form for one item</td>
+          <td>Item.findById()</td>
         </tr>
-        <tr class="table-warning">
-          <th scope="row">Update</th>
+        <tr class="ui inverted orange table">
+          <th>Update</th>
           <td>/items/:id</td>
           <td>PUT</td>
           <td>Update one item, then redirect</td>
+          <td>Item.findByIdAndUpdate()</td>
         </tr>
-        <tr class="table-danger">
-          <th scope="row">Destroy</th>
+        <tr class="ui inverted red table">
+          <th>Destroy</th>
           <td>/items/:id</td>
           <td>DELETE</td>
           <td>Delete one item, then redirect</td>
+          <td>Item.findByIdAndRemove()</td>
         </tr>
 		  </tbody>
 		</table>

@@ -3,7 +3,8 @@ body {
 	height: 1vh;
 }
 
-.table td,
-.table th {
-  border-top: 1px solid #212529;
+.ui .table {
+  border-color: #212529;
+  border-spacing: 2px;
+  margin: 0 auto;
 }
